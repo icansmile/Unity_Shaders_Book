@@ -35,7 +35,7 @@ Shader "My Unity Shaders Book/Chapter 6/Diffuse Vertex-Level" {
 				o.pos = UnityObjectToClipPos(v.vertex); //模型空间到裁剪空间
 
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz; //环境光
-				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));
+				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));//应用于法线向量的变换矩阵是顶点变换矩阵的逆转置矩阵
 				fixed3 worldLight = normalize(_WorldSpaceLightPos0.xyz);
 				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLight));
 
