@@ -1,5 +1,5 @@
 ﻿
-Shader "My Unity Shaders Book/Chapter 8/AlphaTestBothSided" {
+Shader "My Unity Shaders Book/Chapter 8/Alpha Test Both Sided" {
 	Properties {
 		_Color ("Mian Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Main Tex", 2D) = "white" {}
